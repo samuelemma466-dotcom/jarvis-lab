@@ -1,0 +1,16 @@
+# Nested repo, pushed separately
+jarvis-face-hud/
+
+# Runtime logs
+*.log
+
+# Python / virtualenvs
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# OS / editor noise
+.DS_Store
+.vscode/
+.idea/

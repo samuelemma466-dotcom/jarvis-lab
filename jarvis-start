@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Start JARVIS in the background (idempotent).
+rm -f ~/jarvis-lab/jarvis-off
+if pgrep -f "run_jarvis[.]sh" >/dev/null 2>&1; then echo "already running"; exit 0; fi
+nohup setsid bash ~/jarvis-lab/run_jarvis.sh >/dev/null 2>&1 &
+echo "JARVIS starting (will appear within ~10s)"

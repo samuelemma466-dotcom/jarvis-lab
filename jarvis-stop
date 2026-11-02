@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Stop JARVIS permanently until started again.
+touch ~/jarvis-lab/jarvis-off
+for p in $(pgrep -f "venv/bin/python [-u]* *mai[n]\.py" 2>/dev/null); do kill "$p" 2>/dev/null; done
+for w in $(pgrep -f "run_jarvis[.]sh" 2>/dev/null); do kill "$w" 2>/dev/null; done
+echo "JARVIS stopped (run ~/jarvis-lab/jarvis-start to bring back)"
